@@ -16,11 +16,6 @@ class MainActivity : AppCompatActivity() {
         rollButton.setOnClickListener { rollDice() }
     }
 
-
-
-
-
-
     private fun rollDice() {
         val x = when((1..12).random()) {
             1 -> "A"
@@ -36,11 +31,7 @@ class MainActivity : AppCompatActivity() {
             11 -> "G"
             else -> "G Sharp/A Flat"
         }
-
-
-
         val resultTextView: TextView = findViewById(R.id.textView)
-
         resultTextView.text = x + " on fret " + (1..6).random().toString()
     }
 
